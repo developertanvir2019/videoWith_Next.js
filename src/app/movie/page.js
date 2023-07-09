@@ -7,12 +7,10 @@ const Movie = async () => {
     await new Promise(resolve => setTimeout(resolve, 2000));
 
     const url = 'https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en';
-
-    console.log('1122new', url);
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'c02fbc68bcmshbcf86db29a2c655p12007cjsn9adea8d51505',
+            'X-RapidAPI-Key': '6c0fa5156dmsh5317990e304d685p17c505jsn902c651e7f96',
             'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
         }
     };
@@ -20,7 +18,6 @@ const Movie = async () => {
     const res = await fetch(url, options);
     const data = await res.json();
     const main_data = data.titles;
-    console.log(main_data)
 
     return (
         <>
